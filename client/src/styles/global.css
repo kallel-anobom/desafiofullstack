@@ -8,12 +8,18 @@
 :root {
   --white: #fff;
   --background: #f2f3f5;
+  --background-filter: #e6e6e630;
+  --background-dark: #00000045;
+  --background-shadow: #dbdbdb;
   --gray-line: #dcdde0;
-  --text: #666;
+  --text: #606060;
+  --text-dark: rgb(10, 9, 9);
   --text-highlight: #b3b9ff;
   --title: #2e384d;
   --red: #e83f5b;
-  --green: #4cd62b;
+  --green: #8AC34E;
+  --green-shadow: #3aa31f;
+  --green-hover: #74b664;
   --blue: #5965e0;
   --blue-dark: #4953b8;
   --blue-twitter: #2aa9e0;

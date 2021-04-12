@@ -1,0 +1,7 @@
+.Select {
+  width: 100%;
+  margin-top: 2px;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 1rem;
+}

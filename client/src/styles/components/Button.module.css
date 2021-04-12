@@ -1,0 +1,25 @@
+.button {
+  width: 10%;
+  padding: 0.4em;
+  font-family: inherit;
+  font-size: 1rem;
+  color: white;
+  background: var(--green);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px var(--green-shadow);
+  margin-bottom: 2px;
+}
+
+.button:hover {
+  background: var(--green-hover);
+}
+
+.button:active {
+  background: var(--green-hover);
+  box-shadow: 0 2px var(--green-shadow);
+}
+
+.button:focus {
+  outline: none;
+}

@@ -1,0 +1,11 @@
+.Header {
+  padding: 1rem;
+}
+
+.HeaderTitle {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0 2rem;
+  color: var(--text-dark);
+}

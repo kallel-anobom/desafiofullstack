@@ -3,25 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "date-fns": "^2.20.2",
+    "formik": "^2.2.6",
+    "my-react-snackbar": "^1.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.3",
     "react-scripts": "4.0.3",
+    "react-select": "^4.3.0",
+    "react-spinners": "^0.10.6",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "link-module-alias",
+    "preinstall": "command -v link-module-alias && link-module-alias clean || true"
+  },
+  "_moduleAliases": {
+    "component": "src/components",
+    "pages": "src/pages",
+    "style": "src/styles/components",
+    "slice": "src/slices"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -36,6 +49,8 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "link-module-alias": "^1.2.0",
+    "prettier": "2.2.1",
+    "react-router-dom": "^5.2.0"
   }
 }

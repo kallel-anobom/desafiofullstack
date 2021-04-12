@@ -1,7 +1,7 @@
 module.exports = `
   type Question {
     tags: [String!]!
-    owner: Owner
+    owner: Owner!
     is_answered: Boolean
     view_count: Int
     accepted_answer_id: ID

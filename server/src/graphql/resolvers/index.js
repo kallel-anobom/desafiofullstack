@@ -2,7 +2,7 @@ const api = require('../../api/index');
 
 const resolvers = {
 	Query: {
-		questions: async (_, { tag, order = 'desc', score = 0, pagesize = 1, page = 1, sort = 'activity' } ) => {
+		questions: async (_, { tag, order = "desc", score = 0, pagesize = 1, page = 1, sort = "activity" } ) => {
 
       const params = {
         site: 'stackoverflow',
@@ -25,20 +25,23 @@ const resolvers = {
 
           const response = await api.get('/questions', { params });
 
-          let otherQuestionsList = response.data.items;
+          response.data.items.filter(question => question.score >= score).map(question => questionsList.push(question));
 
-          otherQuestionsList = otherQuestionsList.filter(question => question.score > score);
-          questionsList = questionsList.concat(otherQuestionsList)
           page = pageIncrement + 1;
+
+          break;
         }
 
-        questionsList = questionsList.slice(0, limit);
+        if(questionsList.length === 0) {
+          throw new Error('Não existe questions');
+        }
 
-        console.log(questionsList);
+        questionsList = questionsList.slice(0, pagesize);
+
         return questionsList;
 
       } catch (error) {
-        console.error(error)
+        console.error(error);
         throw new Error(error);
       }
 
